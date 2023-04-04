@@ -1,20 +1,20 @@
-let button = document.querySelector('#grindSize');
+let buttonSize = document.querySelector('.grindSize');
+let buttonClear = document.querySelector('.grindSize-clear');
 let grid = document.querySelector('#main');
 let num = 16;
-
 
 createGrid(num);
 gridAlign();
 
-button.addEventListener('click', () => {
+buttonSize.addEventListener('click', () => {
     changeGridSize();
     createGrid(num);
     gridAlign();    
 });
 
-
-console.log(grid.children);
-
+buttonClear.addEventListener('click', () => {
+    clearButton();
+});
 
 function createGrid(val){
 
@@ -30,7 +30,7 @@ function createGrid(val){
         child.style.border='1px solid gray'
         child.addEventListener('mouseenter', () => {
             child.style.backgroundColor = 'yellow';
-        })
+        });
     }
 }
 
@@ -41,4 +41,12 @@ function changeGridSize(){
 
 function gridAlign(){
     grid.style.gridTemplateColumns = "repeat(" + num + ", 1fr)";
+}
+
+function clearButton(){
+    let miniBox = grid.children;
+
+    for(i = 0; i < miniBox.length; i++){
+        miniBox[i].style.backgroundColor = 'white';
+    }
 }
