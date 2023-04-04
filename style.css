@@ -1,3 +1,22 @@
+body {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 5px solid pink;
+    border-radius: 20px;
+    background-color: pink;
+  }
+
 #main {
     display: grid;
     width: 400px;
@@ -7,6 +26,7 @@
 
 #container {
     display: flex;
+    min-height: 400px;
     justify-items: center;
 }
 
@@ -18,7 +38,14 @@
     flex-direction: column;
     gap: 10px;
     width: 200px;
+}
 
+#flex {
+    flex: 1;
+}
+
+#credit {
+    font-size: 20px;
 }
 
 .grindSize{
@@ -33,5 +60,6 @@
     
 
 }
+
 
 
