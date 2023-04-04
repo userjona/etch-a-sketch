@@ -8,7 +8,6 @@
 #container {
     display: flex;
     justify-items: center;
-    border: 1px solid red;
 }
 
 #hud{

@@ -1,6 +1,7 @@
 let buttonSize = document.querySelector('.size');
 let buttonClear = document.querySelector('.clear');
 let colorPicker = document.querySelector('.colorpicker');
+let buttonRainbow = document.querySelector('.rainbow');
 let grid = document.querySelector('#main');
 let num = 16;
 let currentColor = "#ffff00";
@@ -21,6 +22,18 @@ buttonClear.addEventListener('click', () => {
 
 colorPicker.addEventListener('input', () => {
     currentColor = colorPicker.value;
+});
+
+buttonRainbow.addEventListener('click', () => {
+    let miniBox = document.querySelectorAll('.mini');
+    miniBox.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            let red = Math.floor(Math.random() * 256);
+            let blue = Math.floor(Math.random() * 256);
+            let green = Math.floor(Math.random() * 256);
+            item.style.backgroundColor = `rgb(${red},${blue}, ${green})`;
+        });
+    });
 });
 
 function createGrid(val) {
