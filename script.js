@@ -56,6 +56,10 @@ function createGrid(val) {
 
 function changeGridSize() {
     let gridSize = prompt("1-100");
+    if (gridSize < 1 || gridSize > 100){
+        alert('lol');
+        return;
+    }
     num = parseInt(gridSize);
 }
 
