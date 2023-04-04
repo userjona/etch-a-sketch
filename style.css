@@ -6,6 +6,10 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background-image: url(images/drift-cars.gif);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-position-y: 46%;
 }
 
 footer {
@@ -15,7 +19,12 @@ footer {
     border: 5px solid pink;
     border-radius: 20px;
     background-color: pink;
-  }
+}
+
+img {
+    width: 200px;
+    height: 150px;
+}
 
 #main {
     display: grid;
@@ -30,8 +39,11 @@ footer {
     justify-items: center;
 }
 
-#hud{
+#hud {
     display: flex;
+    color: pink;
+    font-weight: bold;
+    font-size: 20px;
     border: 1px solid gray;
     justify-content: flex-start;
     align-items: center;
@@ -48,7 +60,7 @@ footer {
     font-size: 20px;
 }
 
-.grindSize{
+.grindSize {
     display: flex;
     font-size: 20px;
     justify-content: center;
@@ -57,9 +69,4 @@ footer {
     width: 80px;
     margin-top: 20px;
     border: 1px solid pink;
-    
-
 }
-
-
-

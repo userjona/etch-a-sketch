@@ -64,11 +64,7 @@ function gridAlign() {
 }
 
 function clearButton() {
-    let miniBox = grid.children;
-
-    for (i = 0; i < miniBox.length; i++) {
-        miniBox[i].style.backgroundColor = 'white';
-    }
+    createGrid(num);
 }
 
 function colorButton() {
